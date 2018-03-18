@@ -27,7 +27,7 @@ end ControlFSM;
 
 
 architecture behavioral of ControlFSM is
-  type StateType is (StartState,AskCard,LoadCard,AddCard,Compare,Lost,Finished,CompareWithAce,AskCardWithAce,LoadCardWithAce,AddWithAce,Substract,SubstractSecondAce,IllegalState);
+  type StateType is (StartState,AskCard,LoadCard,AddCard,Compare,Lost,Finished,CompareWithAce,AskCardWithAce,LoadCardWithAce,AddCardWithAce,Substract,SubstractSecondAce,IllegalState);
   
   signal outvec       : std_logic_vector(6 downto 0);
   signal state        : StateType;
@@ -54,17 +54,71 @@ begin
         when AskCard =>
           if (cardReadySync = '1') then
             state <= LoadCard;
+          elsif (cardReadySync = '0') then
+            state <= AskCard;
+          else
+            state <= AskCard;
           end if;
         when LoadCard =>
           state <= AddCard;
-        when AddCard=>
+        when AddCard =>
           if (cmp11 = '1') then
             state <= CompareWithAce;
           else
             state <= Compare;
           end if;
         when Compare =>
-          
+          if (cardReadySync = '0') then
+            if (cmp21 = '0' and cmp16 ='0') then
+              state <= AskCard;
+            elsif(cmp21 = '0' and cmp16 ='1') then
+              state <= Finished;
+            elsif(cpm21 = '1') then
+              state <= Lost;
+            else
+              state <= Compare;
+            end if;
+          else
+              state <= Compare;
+          end if;
+        when Finished =>
+          state <= Finished;
+        when Lost =>
+          state <= Lost;
+        when CompareWithAce =>
+          if (cardReadySync = '0') then
+            if (cmp21 = '0' and cmp18 ='0') then
+              state <= AskCardWithAce;
+            elsif(cmp21 = '0' and cmp18 ='1') then
+              state <= Finished;
+            elsif(cpm21 = '1') then
+              state <= Substract;
+            else
+              state <= CompareWithAce;
+            end if;
+          else
+              state <= CompareWithAce;
+          end if;
+        when Substract =>
+          state <= AddCard;
+        when AskCardWithAce =>
+          if (cardReadySync = '1') then
+            state <= LoadCardWithAce;
+          elsif (cardReadySync = '0') then
+            state <= AskCardWithAce;
+          else
+            state <= AskCardWithAce;
+          end if;
+        when LoadCardWithAce =>
+          state <= AddCardWithAce;
+        when AddCardWithAce =>
+          if (cmp11 = '1') then
+            state <= SubstractSecondAce;
+          else
+            state <= CompareWithAce;
+          end if;
+        when SubstractSecondAce =>
+          state <= AddCardWithAce;
 	when others => state <= IllegalState;
       end case;
     end if;
