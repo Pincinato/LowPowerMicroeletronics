@@ -37,21 +37,20 @@ architecture schematic of BlackJack is
                  score : Out std_logic_vector(4 downto 0) );
    end component;
 
-   -- here you add your FSM component
-   -- ...
-   -- ...
+  component ControlFSM
+    Port (cardReady,clock,cmp11,cmp16,cmp18,cmp21,rst : in std_logic;
+          lost,enaAdd,enaLoad,enaScore,finished, newCard,sel : Out std_logic);
+  end component;
 
 begin
 
    I_1 : DataPath
-      Port Map (cardValue,clock,enaAdd,enaLoad,enaScore,start,sel,
-                 cmp11,cmp16,cmp18,cmp21,score);
+      Port Map (cardValue,clock,enaAdd,enaLoad,enaScore,start,sel,cmp11,cmp16,cmp18,cmp21,score);
+   I_2 : ControlFSM
+      Port Map (cardReady,clock,cmp11,cmp16,cmp18,start,lost,enaAdd,enaLoad,enaScore,finished,newCard,sel);
    -- here you add your FSM component
    -- the methode used above is a position-based wiring, example the position 6 means
    -- that the signal "start" on the "BlackJack" hierarchical level is connected to signal "rst"
    -- on the "DataPath" level. Components referenced (like "DataPath" need first to be declared).
-   -- ...
-   -- ...
-
-
+  
 end schematic;
