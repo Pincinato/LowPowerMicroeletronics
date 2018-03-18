@@ -43,25 +43,28 @@ begin
       score    <= (others => '0');
     else
       if (clock'event and clock = '1') then
-
         if (enaAdd = '1') then
-        	regAdd <= regAdd + regLoad;
+          regAdd <= regAdd + regLoad;
         end if;
 	if (enaLoad = '1') then
-		re	
+          if(sel='1') then
+            regLoad <= "11010";
+          else
+            regLoad <= '0' & cardvalue; 
+          end if;
 	end if;
 	if (enaScore ='1') then
+          score <= regAdd;
 	end if;
-
       end if;
     end if;
   end process;
 
   cmp11 <= '1' when (regLoad = "01011") else '0';
-  -- add your own code
-  -- ...
-  -- ...
-
+  cmp16 <= '1' when (regAdd = "10000") else '0';
+  cmp18 <= '1' when (regAdd = "10010") else '0';
+  cmp21 <= '1' when (regAdd = "10101") else '0';
+  
 
 end behavioral;
 
