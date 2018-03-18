@@ -22,14 +22,13 @@ entity ControlFSM is
              enaScore : Out    std_logic;
              finished : Out    std_logic;
               newCard : Out    std_logic;
-                  sel : Out    std_logic );
+                  sel : Out    std_logic);
 end ControlFSM;
 
 
 architecture behavioral of ControlFSM is
-  type StateType is (StartState,CallCard,LoadCard,Handshake,AddCard,LostState,
-                     FinishedState,LoadMinus10,CallCardWithAce,SubWithAce,LoadCardAce,IllegalState,
-                     HandshakeAce,AddCardAce,LoadMinus10Ace,SubWithAce2,Wait1,Wait2);
+  type StateType is (StartState,AskCard,LoadCard,AddCard,Compare,Lost,Finished,CompareWithAce,AskCardWithAce,LoadCardWithAce,AddWithAce,Substract,SubstractSecondAce,IllegalState);
+  
   signal outvec       : std_logic_vector(6 downto 0);
   signal state        : StateType;
   signal cardReadySync: std_logic;
@@ -51,15 +50,21 @@ begin
       cardReadySync <= cardReady; 
       case state is
         when StartState =>
-          state <= CallCard;
-        when CallCard =>
+          state <= AskCard;
+        when AskCard =>
           if (cardReadySync = '1') then
             state <= LoadCard;
           end if;
-        -- add your own code
-        -- ...
-        -- ...
-
+        when LoadCard =>
+          state <= AddCard;
+        when AddCard=>
+          if (cmp11 = '1') then
+            state <= CompareWithAce;
+          else
+            state <= Compare;
+          end if;
+        when Compare =>
+          
 	when others => state <= IllegalState;
       end case;
     end if;
