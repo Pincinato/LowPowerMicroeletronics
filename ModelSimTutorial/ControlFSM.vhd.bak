@@ -138,7 +138,7 @@ begin
         outvec <= "0010100";
       when AddCard | AddCardWithAce =>
         outvec <= "0000010";
-      when Substract | SubstractSecondAce =>
+      when Substract | SubtractSecondAce =>
         outvec <= "0001100";
       when FinishedState =>
         outvec <= "1000001";
