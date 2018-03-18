@@ -130,15 +130,20 @@ begin
   OutBlock: process(state)
   begin
     case state is
-      when StartState =>
-        outvec <= "000--00";              --  don't care is a slash
-      when CallCard | CallCardWithAss =>  --  logic OR combination
-        outvec <= "001--00";
-      when LoadCard | LoadCardAss =>
-        outvec <= "0011100";
-      -- and so on
-      -- ...
-      -- ...
+      when StartState | Compare | CompareWithAce =>
+        outvec <= "0000000";              --  don't care is a slash
+      when AskCard | AskCardWithAce =>  --  logic OR combination
+        outvec <= "0010000";
+      when LoadCard | LoadCardWithAce =>
+        outvec <= "0010100";
+      when AddCard | AddCardWithAce =>
+        outvec <= "0000010";
+      when Subtract | SubtractSecondAce =>
+        outvec <= "0001100";
+      when Finished =>
+        outvec <= "1000001";
+      when Lost =>
+        outvec <= "1100000";
       when others=> outvec <= "-------";
     end case;
   end process;
@@ -147,9 +152,11 @@ begin
   --  add your VHDL code to complete
   finished <= outvec(6);
   lost     <= outvec(5);
-  -- and so on
-  -- ...
-  -- ...
-
+  newCard  <= outvec(4);
+  sel  <= outvec(3);
+  enaLoad  <= outvec(2);
+  enaAdd  <= outvec(1);
+  enaScore  <= outvec(0);
+   
 end behavioral;
 
