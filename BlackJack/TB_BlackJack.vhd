@@ -53,7 +53,7 @@ begin
 
        
        StimuliGeneration : process	   
-       begin  -- process StimuliGeneration for cards: 11, 2, 11, 3, 5, 7
+       begin  -- process StimuliGeneration for cards: 11, 2, 11, 3, 5, 7,4
 	   start <= '0';
 	   cardReady <= '0';
 	   wait for 100 ns;  		-- test cycle 1
@@ -65,24 +65,50 @@ begin
 	   cardValue <= "1011";
 	   wait for 100 ns;  		-- test cycle 4
 	   cardReady <= '1';
-	   -- Instead of the 'wait for 100 ns' VHDL construction you may use
-	   -- a 'wait until condition' command as as illustrated at the end
-	   -- of these comment lines.
-	   -- The 'sync' signal is used to be shure, that the test cycles are
-	   -- synchronized with the 100 ns cycles. Thus all UUT input signals
-	   -- will always start at the beginning of a test cycle.
-	   -- More challenged students may use this kind of construction
-	   -- when waiting on a response of the UUT instead of waiting a fixed
-	   -- number of test cycles for the response.
 	   wait until (newCard = '0' and sync'event and sync = '1');  -- test cycle 6
 	   cardReady <= '0';
 	   wait until (newCard = '1' and sync'event and sync = '1');  -- test cycle 5
-	   -- a new cardValue is expected: 2
-
-           -- here you add your own testbench code
-           -- ...
-           -- ...
-
+	    -- a new cardValue is expected: 2
+	   cardValue <= "0010";
+	   wait for 100 ns;  		
+	   cardReady <= '1';
+	   wait until (newCard = '0' and sync'event and sync = '1');  
+	   cardReady <= '0;
+	   wait until (newCard = '1' and sync'event and sync = '1');  
+	    -- a new cardValue is expected: 11
+	   cardValue <= "1011";
+	   wait for 100 ns;  		
+	   cardReady <= '1';
+	   wait until (newCard = '0' and sync'event and sync = '1');  
+	   cardReady <= '0;
+	   wait until (newCard = '1' and sync'event and sync = '1');  
+	    -- a new cardValue is expected: 3
+	   cardValue <= "0011";
+	   wait for 100 ns;  		
+	   cardReady <= '1';
+	   wait until (newCard = '0' and sync'event and sync = '1');  
+	   cardReady <= '0;
+	   wait until (newCard = '1' and sync'event and sync = '1');  
+	    -- a new cardValue is expected: 5
+	   cardValue <= "0101";
+	   wait for 100 ns;  		
+	   cardReady <= '1';
+	   wait until (newCard = '0' and sync'event and sync = '1');  
+	   cardReady <= '0;
+	   wait until (newCard = '1' and sync'event and sync = '1');  
+	    -- a new cardValue is expected: 7
+	   cardValue <= "0111";
+	   wait for 100 ns;  		
+	   cardReady <= '1';
+	   wait until (newCard = '0' and sync'event and sync = '1');  
+	   cardReady <= '0;
+	   wait until (newCard = '1' and sync'event and sync = '1');  
+	    -- a new cardValue is expected: 4
+	   cardValue <= "0100";
+	   wait for 100 ns;  		
+	   cardReady <= '1';
+	   wait until (newCard = '0' and sync'event and sync = '1');  
+	   cardReady <= '0;
 	   wait for 500 ns;	   
        end process StimuliGeneration;
 
