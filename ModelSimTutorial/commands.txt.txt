@@ -1,0 +1,3 @@
+vsim -t ns E
+add wave *
+run 500000
