@@ -1,0 +1,2 @@
+I nthe Datapath, cmp 16 , cmp18 and cmp 21 are just compare if it is equal.
+It should compare if it is equal or bigger than.

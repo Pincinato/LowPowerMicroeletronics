@@ -48,7 +48,7 @@ begin
         end if;
 	if (enaLoad = '1') then
           if(sel='1') then
-            regLoad <= "11010";
+            regLoad <= "10110";
           else
             regLoad <= '0' & cardvalue; 
           end if;
