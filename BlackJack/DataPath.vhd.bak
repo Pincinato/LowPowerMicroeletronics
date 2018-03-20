@@ -63,8 +63,8 @@ begin
 
   cmp11 <= '1' when (regLoad = "01011") else '0';
   cmp16 <= '1' when (to_integer(unsigned(regAdd)) >16) else '0'; 
-  cmp18 <= '1' when (to_integer(unsigned(regAdd)) >18) else '0'; 
-  cmp21 <= '1' when (to_integer(unsigned(regAdd)) >21) else '0'; 
+  cmp18 <= '1' when (regAdd = "10010") else '0';
+  cmp21 <= '1' when (regAdd = "10101") else '0';
   
 
 end behavioral;
