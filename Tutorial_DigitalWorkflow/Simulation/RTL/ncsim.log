@@ -1,0 +1,7 @@
+ncsim(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /opt/cadence/incisive/tools/inca/files/ncsimrc
+ncsim> 
