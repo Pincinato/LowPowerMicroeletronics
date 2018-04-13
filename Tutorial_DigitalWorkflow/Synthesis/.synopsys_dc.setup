@@ -1,0 +1,22 @@
+#Synopsys Design Compiler Script
+#Modified 30.11.2017 GROSSENBACHER Jonas
+
+puts "Owner: Cadence  GPDK: Digital"
+set LIBHOME /opt/cadence/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045/timing/db
+#set SYMHOME /opt/cadence/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045/oa22/gsclib045 
+set IOHOME /opt/cadence/giolib045_v3.2/lan/flow/t1u1/reference_libs/GPDK045/giolib045_v3.2/giolib045/timing/db/
+
+set search_path	"$search_path . $LIBHOME $IOHOME"
+set target_library "fast_vdd1v2_basicCells.db pads.db"
+
+set link_library "fast_vdd1v2_basicCells.db slow_vdd1v0_basicCells.db pads.db"
+
+#set symbol_library "??.sdb"
+set sdfout_no_edge  true
+set verilogout_equation	false
+set verilogout_no_tri	true 
+set verilogout_single_bit  false
+set hdlout_internal_busses true     
+set write_name_nets_same_as_ports true
+set company "BFH TI HuCE-microlab"
+set timescale 1

@@ -1,4 +1,4 @@
 ncelab(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
 ncelab: *W,ARCMRA: Elaborating the WORKLIB.E:A, MRA (most recently analyzed) architecture.
 ncelab: Memory Usage - 49.8M program + 33.2M data = 83.0M total (Peak 91.0M)
-ncelab: CPU Usage - 0.1s system + 0.0s user = 0.1s total (0.2s, 51.1% cpu)
+ncelab: CPU Usage - 0.2s system + 0.1s user = 0.2s total (0.9s, 26.9% cpu)
