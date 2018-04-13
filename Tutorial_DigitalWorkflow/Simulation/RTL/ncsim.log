@@ -6,7 +6,7 @@ ncsim>
 ncsim> source /opt/cadence/incisive/tools/inca/files/ncsimrc
 ncsim> database -open waves -into waves.shm -default
 Created default SHM database waves
-ncsim> probe -create -shm :UUT:cardReady :UUT:cardValue :UUT:clock :UUT:cmp11 :UUT:cmp16 :UUT:cmp18 :UUT:cmp21 :UUT:enaAdd :UUT:enaLoad :UUT:enaScore :UUT:finished :UUT:lost :UUT:newCard :UUT:score :UUT:sel :UUT:start :UUT:I_2:state
+ncsim> probe -create -shm :UUT:cardReady :UUT:cardValue :UUT:clk :UUT:cmp11 :UUT:cmp16 :UUT:cmp18 :UUT:cmp21 :UUT:enaAdd :UUT:enaLoad :UUT:enaScore :UUT:finished :UUT:lost :UUT:newCard :UUT:score :UUT:sel :UUT:start
 Created probe 1
 ncsim> reset
 Loaded snapshot worklib.e:a
@@ -20,4 +20,9 @@ Built-in conversion function argument contains ('U', 'X', 'W', 'Z', '-') in an o
 ASSERT/WARNING (time 0 FS) from package ieee.STD_LOGIC_ARITH, this builtin function called  from process :UUT:I_1:$PROCESS_000 (architecture worklib.DataPath:behavioral)
 Built-in relational argument contains a ('U', 'X', 'W', 'Z', '-') in an operand.
 Ran until 5 US + 0
-ncsim> 
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+ncsim: Memory Usage - 36.4M program + 190.4M data = 226.8M total (230.4M Peak)
+ncsim: CPU Usage - 8.2s system + 3.6s user = 11.8s total (120.4s, 9.8% cpu)

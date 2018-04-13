@@ -10,7 +10,7 @@ use IEEE.std_logic_1164.all;
 entity BlackJack is
       Port ( cardReady : In  std_logic;
              cardValue : In  std_logic_vector(3 downto 0);
-                 clock : In  std_logic;
+                 clk : In  std_logic;
                  start : In  std_logic;
                   lost : Out std_logic;
               finished : Out std_logic;
@@ -45,9 +45,9 @@ architecture schematic of BlackJack is
 begin
 
    I_1 : DataPath
-      Port Map (cardValue,clock,enaAdd,enaLoad,enaScore,start,sel,cmp11,cmp16,cmp18,cmp21,score);
+      Port Map (cardValue,clk,enaAdd,enaLoad,enaScore,start,sel,cmp11,cmp16,cmp18,cmp21,score);
    I_2 : ControlFSM
-      Port Map (cardReady,clock,cmp11,cmp16,cmp18,cmp21,start,lost,enaAdd,enaLoad,enaScore,finished,newCard,sel);
+      Port Map (cardReady,clk,cmp11,cmp16,cmp18,cmp21,start,lost,enaAdd,enaLoad,enaScore,finished,newCard,sel);
    -- here you add your FSM component
    -- the methode used above is a position-based wiring, example the position 6 means
    -- that the signal "start" on the "BlackJack" hierarchical level is connected to signal "rst"

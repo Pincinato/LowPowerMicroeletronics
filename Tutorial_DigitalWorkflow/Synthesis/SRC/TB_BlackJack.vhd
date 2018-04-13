@@ -14,7 +14,7 @@ Architecture A of E is
 
    signal cardReady : std_logic;
    signal cardValue : std_logic_vector(3 downto 0);
-   signal     clock : std_logic;
+   signal     clk : std_logic;
    signal     start : std_logic;
    signal      lost : std_logic;
    signal  finished : std_logic;
@@ -24,7 +24,7 @@ Architecture A of E is
    component BlackJack
       Port ( cardReady : In  std_logic;
              cardValue : In  std_logic_vector(3 downto 0);
-                 clock : In  std_logic;
+                 clk : In  std_logic;
                  start : In  std_logic;
                   lost : Out std_logic;
               finished : Out std_logic;
@@ -34,7 +34,7 @@ Architecture A of E is
 
 begin
    UUT : BlackJack
-      Port Map (cardReady,cardValue,clock,start,lost,finished,newCard,score);
+      Port Map (cardReady,cardValue,clk,start,lost,finished,newCard,score);
 
 -- *** Test Bench - User Defined Section ***
    TB : block
@@ -43,7 +43,7 @@ begin
 
        ClockGeneration : process	   
        begin  -- process ClockGeneration
-	   clock <= '0', '1' after 20 ns, '0' after 50 ns;
+	   clk <= '0', '1' after 20 ns, '0' after 50 ns;
 	   -- The following 'sync' signal is optional and only needed if
 	   -- you intend to use an advanced test cycle synchronization described
 	   -- in the 'StimuliGeneration' process below. 
