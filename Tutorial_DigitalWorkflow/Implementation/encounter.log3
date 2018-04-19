@@ -1,0 +1,334 @@
+Checking out Encounter license ...
+	edsxl		DENIED:		"Encounter_Digital_Impl_Sys_XL"
+	edsl		DENIED:		"Encounter_Digital_Impl_Sys_L"
+	encblk		DENIED:		"Encounter_Block"
+	fegxl		DENIED:		"First_Encounter_GXL"
+	fexl		DENIED:		"FE_GPS"
+	nru		DENIED:		"NanoRoute_Ultra"
+	vdixl		DENIED:		"Virtuoso_Digital_Implem_XL"
+	vdi		DENIED:		"Virtuoso_Digital_Implem"
+	fel		DENIED:		"First_Encounter_VIP"
+	invsb		DENIED:		"Innovus_Impl_System_Basic"
+	invs		CHECKED OUT:	"Innovus_Impl_System"
+Innovus_Impl_System 15.1 license checkout succeeded.
+You can run 8 CPU jobs with the base license that is currently checked out.
+If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2014.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v14.28-s033_1 (64bit) 03/21/2016 13:34 (Linux 2.6.18-194.el5)
+@(#)CDS: NanoRoute v14.28-s005 NR160313-1959/14_28-UB (database version 2.30, 267.6.1) {superthreading v1.25}
+@(#)CDS: CeltIC v14.28-s006_1 (64bit) 03/08/2016 00:08:23 (Linux 2.6.18-194.el5)
+@(#)CDS: AAE 14.28-s002 (64bit) 03/21/2016 (Linux 2.6.18-194.el5)
+@(#)CDS: CTE 14.28-s007_1 (64bit) Mar  7 2016 23:11:05 (Linux 2.6.18-194.el5)
+@(#)CDS: CPE v14.28-s006
+@(#)CDS: IQRC/TQRC 14.2.2-s217 (64bit) Wed Apr 15 23:10:24 PDT 2015 (Linux 2.6.18-194.el5)
+@(#)CDS: OA 22.50-p011 Tue Nov 11 03:24:55 2014
+@(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+@(#)CDS: RCDB 11.5
+--- Starting "Encounter v14.28-s033_1" on Thu Apr 19 09:53:07 2018 (mem=100.3M) ---
+--- Running on 05b2a4f075ed (x86_64 w/Linux 4.9.0-6-amd64) ---
+This version was compiled on Mon Mar 21 13:34:48 PDT 2016.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+Loading fill procedures ...
+Sourcing tcl/tk file "DB/BlackJack_encounter.enc" ...
+<CMD> restoreDesign /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat BlackJack_top
+Loading global variable file /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/BlackJack_top.globals ...
+Set Input Pin Transition Delay as 0.1 ps.
+
+Loading LEF file /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/lef/gsclib045_tech.lef ...
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PO', 
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_DIFF', 
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PSUB', 
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PIMP', 
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NIMP', 
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NWELL', 
+
+Loading LEF file /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/lef/gsclib045_macro.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/lef/giolib045.lef ...
+**WARN: (ENCLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED60' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED5' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED3' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VDDPAD25' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VSSPAD' in macro 'padIORINGFEED1' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VSS25' in macro 'PADVSS25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'VDD25' in macro 'PADVDD25' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'OEN' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'A' in macro 'PADDOZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-201):	Pin 'PAD' in macro 'PADDOZ' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-201' for more detail.
+**WARN: (ENCLF-200):	Pin 'A' in macro 'PADDO' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-201):	Pin 'PAD' in macro 'PADDO' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-201' for more detail.
+**WARN: (ENCLF-201):	Pin 'PAD' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-201' for more detail.
+**WARN: (ENCLF-200):	Pin 'PAD' in macro 'PADDI' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-201):	Pin 'Y' in macro 'PADDI' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-201' for more detail.
+**WARN: (ENCLF-201):	Pin 'Y' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-201' for more detail.
+**WARN: (ENCLF-200):	Pin 'A' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'OEN' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-201):	Pin 'PAD' in macro 'PADDB' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-201' for more detail.
+**WARN: (ENCLF-200):	Pin 'PAD' in macro 'PADDB' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'AY' in macro 'PADANALOG' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+**WARN: (ENCLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man ENCLF-200' for more detail.
+
+viaInitial starts at Thu Apr 19 09:53:08 2018
+viaInitial ends at Thu Apr 19 09:53:08 2018
+*** Begin netlist parsing (mem=339.9M) ***
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/BlackJack_top.v.gz'
+
+*** Memory Usage v#1 (Current mem = 340.871M, initial mem = 100.270M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=340.9M) ***
+Set top cell to BlackJack_top.
+Loading view definition file from /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/viewDefinition.tcl
+Reading wc_1v0 timing library '/opt/cadence/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXL' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXL' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXL' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXL' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDHX1' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX2' is not defined in the library.
+Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis.
+Read 489 cells in library 'slow_vdd1v0' 
+Reading wc_1v0 timing library '/opt/cadence/giolib045_v3.2/lan/flow/t1u1/reference_libs/GPDK045/giolib045_v3.2/giolib045/timing/pads.lib' ...
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'PAD' of cell 'PADDI' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+Read 3 cells in library 'pads' 
+Reading bc_1v0 timing library '/opt/cadence/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v2_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis.
+Read 489 cells in library 'fast_vdd1v2' 
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.11min, fe_real=0.20min, fe_mem=405.1M) ***
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell BlackJack_top ...
+*** Netlist is unique.
+** info: there are 1090 modules.
+** info: there are 106 stdCell insts.
+** info: there are 15 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 409.852M, initial mem = 100.270M) ***
+*info: set bottom ioPad orient R0
+Reading IO assignment file "/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/iofile/BlackJack_IORING.io" ...
+**WARN: (ENCFP-3961):	The techSite 'corner' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+**WARN: (ENCFP-3961):	The techSite 'pad' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+**WARN: (ENCFP-3961):	The techSite 'CornerSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+**WARN: (ENCFP-3961):	The techSite 'IOSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Type 'man ENCFP-3961' for more detail.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+Loading preference file /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/enc.pref.tcl ...
+Loading mode file /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/BlackJack_top.mode ...
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQRC, IQRC and QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if QRC technology file is specified else 'low'.
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Importing multi-corner technology file(s) for preRoute extraction...
+/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/mmmc/gpdk045.tch
+Completed (cpu: 0:00:05.5 real: 0:00:05.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: wc
+    RC-Corner Name        : rcx_typical
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1   	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1   	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/mmmc/gpdk045.tch'
+ 
+ Analysis View: bc
+    RC-Corner Name        : rcx_typical
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1   	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1   	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/mmmc/gpdk045.tch'
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+CTE reading timing constraint file '/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/mmmc/BlackJack_top_func.sdc' ...
+Current (total cpu=0:00:12.4, real=0:00:18.0, peak res=429.1M, current mem=567.8M)
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/mmmc/BlackJack_top_func.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with 1 WARNING.
+WARNING (CTE-25): Line: 8 of File /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/libs/mmmc/BlackJack_top_func.sdc : Skipped unsupported command: set_units
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=443.3M, current mem=581.3M)
+Current (total cpu=0:00:12.4, real=0:00:19.0, peak res=443.3M, current mem=581.3M)
+Total number of combinational cells: 324
+Total number of sequential cells: 152
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX4 CLKINVX3 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Reading floorplan file - /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/BlackJack_top.fp.gz (mem = 581.3M).
+*info: reset 130 existing net BottomPreferredLayer and AvoidDetour
+ ... processed partition successfully.
+There are 40 io inst loaded
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** End loading floorplan (cpu = 0:00:00.0, mem = 581.3M) ***
+Loading place ...
+*** Checked 4 GNC rules.
+*** applyConnectGlobalNets disabled.
+Reading placement file - /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/BlackJack_top.place.gz.
+** Reading stdCellPlacement "/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/BlackJack_top.place.gz" ...
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=581.3M) ***
+Total net length = 9.800e-02 (4.900e-02 4.900e-02) (ext = 0.000e+00)
+Unplaced Insts:	106 out of 106
+**WARN: (ENCSP-311):	From restore design about 100.00% of instances are not placed. Most probably the 
+design imported through DEF file is partially placed. Either run placeDesign to 
+place these instances or re-import fully placed DEF file.
+*** Checked 4 GNC rules.
+*** Applying global-net connections...
+*** Applied 4 GNC rules (cpu = 0:00:00.0)
+Loading route ...
+Reading routing file - /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Implementation/DB/BlackJack_encounter.enc.dat/BlackJack_top.route.gz.
+Reading Encounter routing data (Created by Encounter v14.28-s033_1 on Thu Apr 19 09:48:26 2018 Format: 14.2) ...
+*** Total 132 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=581.3M) ***
+Set Input Pin Transition Delay as 0.1 ps.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCLF-155            6  ViaRule only supports routing/cut layer,...
+WARNING   ENCLF-200           19  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   ENCLF-201            6  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   ENCFP-3961           4  The techSite '%s' has no related cells i...
+WARNING   ENCTS-414            1  There is mismatch in pin direction for t...
+WARNING   ENCSP-311            1  From restore design about %.2f%% of inst...
+*** Message Summary: 37 warning(s), 0 error(s)
+
+<CMD> selectInst CORNER4
+<CMD> fit
+
+*** Memory Usage v#1 (Current mem = 590.875M, initial mem = 100.270M) ***
+*** Message Summary: 37 warning(s), 0 error(s)
+
+--- Ending "Encounter" (totcpu=0:00:24.4, real=0:01:34, mem=590.9M) ---

@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version M-2016.12 for linux64 -- Nov 21, 2016
-#@ # Date:   Fri Apr 13 12:24:05 2018
-#@ # Run by: user@82f9c07a021b
+#@ # Date:   Thu Apr 19 07:20:34 2018
+#@ # Run by: user@1ac8b29a72d2
 #@ 
 
 source /opt/synopsys/designcompiler/admin/setup/.synopsys_dc.setup
@@ -41965,60 +41965,26 @@ gui_start
 #@ 
 #@ # -- End source /opt/synopsys/designcompiler/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
-check_design -multiple_designs
 analyze -library WORK -format vhdl [ls ./SRC/*.vhd]
-check_design -multiple_designs
 elaborate BlackJack_TOP -architecture schematic -library WORK
 check_design -multiple_designs
-write -hierarchy -format ddc -output /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Synthesis/BlackJack.ddc
-change_selection [get_s core/I_2]
-change_selection [get_s core/I_1]
-change_selection [get_s core]
-change_selection [get_s core/I_1]
-change_selection [get_s core/I_2]
-change_selection [get_s core/I_2/N119]
-change_selection [get_s core/I_2/enaScore]
-change_selection [get_s core/I_2/N118]
-change_selection [get_s core/I_2/N116]
-change_selection [get_s core/I_1]
-change_selection [get_s core/I_1/N2]
-change_selection [get_s core]
-change_selection [get_s core/clk]
-change_selection [get_s {{core/score[0]}}]
-write -hierarchy -format ddc
-write -hierarchy -format ddc -output /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Synthesis/_BlackJack_.ddc
+write_file -format ddc -hierarchy -output ./SYN/DDC/BlackJack_TOP_postcheck.ddc
 change_selection [get_s BlackJack_top]
 change_selection [get_s core]
 change_selection [get_s core/I_2]
 change_selection [get_s BlackJack_top]
-change_selection [get_s core]
-change_selection [get_s core/I_1]
-change_selection [get_s core/I_2]
-change_selection 
-change_selection [get_s BlackJack_top]
-change_selection [get_s BlackJack_top]
-change_selection [get_s core/I_1]
 create_clock -name "clk" -period 100 -waveform {0 50} {clk}
-write -hierarchy -format ddc -output /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Synthesis/_BlackJack_.ddc
-change_selection [get_s core/I_1]
 set_clock_uncertainty 2.5 clk
 set_clock_latency 5 clk
 set_clock_transition 2.5 clk
-write -hierarchy -format ddc -output /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Synthesis/_BlackJack_.ddc
-gui_scroll -window [gui_get_current_window -view] -vrel -.2
-gui_scroll -window [gui_get_current_window -view] -vrel .2
 set_dont_touch_network clk
 report_clock
-change_selection -remove [get_s core/I_1]
 report_clock -skew
-write -hierarchy -format ddc -output /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Synthesis/_BlackJack_.ddc
-report_port
 set_driving_cell -library pads -lib_cell PADDO -pin PAD [get_ports cardReady]
 set_driving_cell -library pads -lib_cell PADDO -pin PAD [get_ports cardValue]
 set_driving_cell -library pads -lib_cell PADDO -pin PAD [get_ports start]
 set_load 20 [all_outputs]
 report_port
-write -hierarchy -format ddc -output /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Synthesis/_BlackJack_.ddc
 set_input_delay 0 [get_ports cardReady] -clock clk
 set_input_delay 0 [get_ports cardValue] -clock clk
 set_input_delay 0 [get_ports start] -clock clk
@@ -42026,4 +41992,19 @@ set_dont_touch [get_net -of_objects [get_pins */PAD]]
 set_operating_condition -lib pads WORST
 set_wire_load_model -lib pads -name "10k"
 set_wire_load_mode top
-write -hierarchy -format ddc -output /home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Synthesis/_BlackJack_.ddc
+write_file -format ddc -hierarchy -output ./SYN/DDC/BlackJack_TOP_postcheck.ddc
+compile_ultra
+write_file -format ddc -hierarchy -output ./SYN/DDC/BlackJack_TOP_postcheck.ddc
+change_selection [get_s BlackJack_top]
+change_selection [::snpsGuiSyn::get_current_design]
+change_selection [get_s BlackJack_top]
+change_selection 
+change_selection [::snpsGuiSyn::get_current_design]
+change_selection 
+report_qor
+report_constraint -all_violators
+report_timing
+write_file -format verilog -hierarchy -output ./SYN/NETLIST/BlackJack_top_compiled.v
+write_sdc ./SYN/SCR/BlackJack_top_func.sdc
+write_file -format ddc -hierarchy -output ./SYN/DDC/BlackJack_top_compiled.ddc
+exit

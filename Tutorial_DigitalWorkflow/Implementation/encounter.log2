@@ -1,0 +1,75 @@
+Checking out Encounter license ...
+	edsxl		DENIED:		"Encounter_Digital_Impl_Sys_XL"
+	edsl		DENIED:		"Encounter_Digital_Impl_Sys_L"
+	encblk		DENIED:		"Encounter_Block"
+	fegxl		DENIED:		"First_Encounter_GXL"
+	fexl		DENIED:		"FE_GPS"
+	nru		DENIED:		"NanoRoute_Ultra"
+	vdixl		DENIED:		"Virtuoso_Digital_Implem_XL"
+	vdi		DENIED:		"Virtuoso_Digital_Implem"
+	fel		DENIED:		"First_Encounter_VIP"
+	invsb		DENIED:		"Innovus_Impl_System_Basic"
+	invs		CHECKED OUT:	"Innovus_Impl_System"
+Innovus_Impl_System 15.1 license checkout succeeded.
+You can run 8 CPU jobs with the base license that is currently checked out.
+If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2014.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v14.28-s033_1 (64bit) 03/21/2016 13:34 (Linux 2.6.18-194.el5)
+@(#)CDS: NanoRoute v14.28-s005 NR160313-1959/14_28-UB (database version 2.30, 267.6.1) {superthreading v1.25}
+@(#)CDS: CeltIC v14.28-s006_1 (64bit) 03/08/2016 00:08:23 (Linux 2.6.18-194.el5)
+@(#)CDS: AAE 14.28-s002 (64bit) 03/21/2016 (Linux 2.6.18-194.el5)
+@(#)CDS: CTE 14.28-s007_1 (64bit) Mar  7 2016 23:11:05 (Linux 2.6.18-194.el5)
+@(#)CDS: CPE v14.28-s006
+@(#)CDS: IQRC/TQRC 14.2.2-s217 (64bit) Wed Apr 15 23:10:24 PDT 2015 (Linux 2.6.18-194.el5)
+@(#)CDS: OA 22.50-p011 Tue Nov 11 03:24:55 2014
+@(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+@(#)CDS: RCDB 11.5
+--- Starting "Encounter v14.28-s033_1" on Thu Apr 19 09:51:51 2018 (mem=100.3M) ---
+--- Running on 05b2a4f075ed (x86_64 w/Linux 4.9.0-6-amd64) ---
+This version was compiled on Mon Mar 21 13:34:48 PDT 2016.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+Loading fill procedures ...
+Sourcing tcl/tk file "TCL/implement.tcl" ...
+<CMD> set init_design_settop 0
+<CMD> set defHierChar /
+<CMD> set init_lef_file { /opt/cadence/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045/lef/gsclib045_tech.lef /opt/cadence/gsclib045_all_v4.4/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045/lef/gsclib045_macro.lef /opt/cadence/giolib045_v3.2/lan/flow/t1u1/reference_libs/GPDK045/giolib045_v3.2/giolib045/lef/giolib045.lef}
+<CMD> set init_pwr_net vdd
+<CMD> set init_gnd_net vss
+<CMD> set init_verilog VERILOG/BlackJack_top_compiled.v
+<CMD> set init_top_cell BlackJack_top
+<CMD> set init_io_file CONSTRAINTS/BlackJack_IORING.io
+<CMD> set init_mmmc_file TCL/mmmc.tcl
+wrong # args: should be "encounter"
+
+*** Memory Usage v#1 (Current mem = 327.988M, initial mem = 100.270M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Encounter" (totcpu=0:00:13.2, real=0:01:10, mem=328.0M) ---

@@ -1,0 +1,26 @@
+ncsim(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /opt/cadence/incisive/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm :UUT.start :UUT.score :UUT.newCard :UUT.lost :UUT.finished :UUT.clk :UUT.cardValue :UUT.cardReady :UUT.@{\core/I_2/state }
+Created probe 1
+ncsim> reset
+Loaded snapshot worklib.e:a
+ncsim> run 5 us
+Ran until 5 US + 0
+ncsim> probe -create -shm :UUT.@{\core/I_1/regAdd } :UUT.@{\core/I_1/regLoad } :UUT.@{\core/I_2/cardReadySync } :UUT.n48 :UUT.n49 :UUT.n50 :UUT.n51 :UUT.n52 :UUT.n53 :UUT.n54 :UUT.n55 :UUT.n56 :UUT.n57 :UUT.n58 :UUT.n59 :UUT.n60 :UUT.n61 :UUT.n62 :UUT.n63 :UUT.n64 :UUT.n65 :UUT.n66 :UUT.n67 :UUT.n68 :UUT.n70 :UUT.n71 :UUT.n72 :UUT.n73 :UUT.n74 :UUT.n75 :UUT.n76 :UUT.n77 :UUT.n78 :UUT.n79 :UUT.n80 :UUT.n81 :UUT.n82 :UUT.n83 :UUT.n84 :UUT.n85 :UUT.n86 :UUT.n87 :UUT.n88 :UUT.n89 :UUT.n90 :UUT.n91 :UUT.n92 :UUT.n93 :UUT.n94 :UUT.n95 :UUT.n96 :UUT.n97 :UUT.n98 :UUT.n99 :UUT.n100 :UUT.n101 :UUT.n102 :UUT.n103 :UUT.n104 :UUT.n105 :UUT.n106 :UUT.n107 :UUT.n108 :UUT.n109 :UUT.n110 :UUT.n111 :UUT.n112 :UUT.n113 :UUT.n114 :UUT.n115 :UUT.n116 :UUT.n117 :UUT.n118 :UUT.n119 :UUT.n120 :UUT.n121 :UUT.n122 :UUT.n123 :UUT.n124 :UUT.n125 :UUT.n126 :UUT.n127 :UUT.n128 :UUT.n129 :UUT.n130 :UUT.n131 :UUT.n132 :UUT.n133 :UUT.s_cardReady :UUT.s_cardValue :UUT.s_clk :UUT.s_lost :UUT.s_score :UUT.s_start :TB:sync
+Created probe 2
+ncsim> reset
+Loaded snapshot worklib.e:a
+ncsim> run 5 us
+Ran until 5 US + 0
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+ncsim: Memory Usage - 36.4M program + 196.3M data = 232.7M total (236.5M Peak)
+ncsim: CPU Usage - 102.9s system + 58.8s user = 161.8s total (2379.1s, 6.8% cpu)
