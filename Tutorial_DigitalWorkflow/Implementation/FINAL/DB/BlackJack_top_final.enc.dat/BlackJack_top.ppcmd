@@ -1,0 +1,160 @@
+# PPCMD 1 
+# sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1 Metal11 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1 Metal11 } -nets { vdd vss VDDIOR VSSIOR } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1 Metal11 }
+# 10 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets {vdd vss} -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 9 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets {vdd vss} -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 8 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# vss 10000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 820000 545640 820000 1094440 
+# END_RING_PT_INFO_LIST 
+# vss 10000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 545000 820040 1095000 820040 
+# END_RING_PT_INFO_LIST 
+# vdd 10000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 820000 565640 820000 1074440 
+# END_RING_PT_INFO_LIST 
+# vdd 10000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 565000 820040 1075000 820040 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+
+# PPCMD 4 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets vss_vdd -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 7 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 4 
+
+# PPCMD 5 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets vss_vdd -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 6 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 5 
+
+# PPCMD 6 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets vss_vdd -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 5 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 6 
+
+# PPCMD 7 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets vss_vdd -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 4 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 7 
+
+# PPCMD 8 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets vss_vdd -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 3 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 8 
+
+# PPCMD 9 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets vss_vdd -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 2 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 9 
+
+# PPCMD 10 
+# addRing -skip_via_on_wire_shape Noshape -spacing_bottom 5 -width_left 5 -width_bottom 5 -width_top 5 -spacing_top 5 -skip_via_on_pin Standardcell -layer_bottom Metal1 -stacked_via_top_layer Metal11 -width_right 5 -type core_rings -jog_distance 0.6 -offset_bottom 5 -layer_top Metal1 -threshold 0.6 -offset_left 5 -spacing_right 5 -spacing_left 5 -offset_right 5 -offset_top 5 -layer_right Metal2 -nets vss_vdd -follow core -stacked_via_bottom_layer Metal1 -layer_left Metal2
+# 1 
+# 32 
+# 0 
+# 0 
+# 0 
+# 0 
+# SELECTED_OBJECTS 
+# selectObject Pin {IO_CARDVALUE_0/PAD}
+# selectObject IO_Pin {cardValue[0]}
+# END_SELECTED_OBJECTS 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 10 
+

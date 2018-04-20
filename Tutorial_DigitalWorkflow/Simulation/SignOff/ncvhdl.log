@@ -1,0 +1,9 @@
+ncvhdl(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+   UUT : BlackJack_IO
+                    |
+ncvhdl_p: *E,IDENTU (/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Simulation/SignOff/TB_BlackJack.vhd,36|20): identifier (BLACKJACK_IO) is not declared [10.3].
+   for A
+       |
+ncvhdl_p: *E,BCILAN (/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Simulation/SignOff/TB_BlackJack.vhd,123|7): architecture name expected [1.3.1].
+ncvhdl_p: Memory Usage - 20.0M program + 13.0M data = 33.0M total
+ncvhdl: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 61.0% cpu)

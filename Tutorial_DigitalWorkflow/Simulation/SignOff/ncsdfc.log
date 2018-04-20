@@ -1,0 +1,4 @@
+ncsdfc(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+	Reading SDF file from location "/home/user/Desktop/unibe/LowPowerMicroeletronics/Tutorial_DigitalWorkflow/Simulation/SignOff/BlackJack_top_layout.sdf"
+ncsdfc: Memory Usage - 18.8M program + 12.4M data = 31.2M total
+ncsdfc: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 98.7% cpu)
